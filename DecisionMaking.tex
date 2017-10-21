@@ -707,3 +707,26 @@ Seperti yang ditunjukkan pada Gambar Gambar11 ada empat komponen model yang dibu
 
 Untuk kasus ini, proses input digunakan sebagai perkiraan masukan sensoris aktual yang ditunjukkan pada subjek. Gambar Gambar 11 menyajikan skematik model Bayesian dan keempat komponennya. Untuk setiap komponen, kami bertujuan untuk memilih formulasi yang paling sederhana agar sesuai dengan kesederhanaan matematika dari pDDM. Berikut ini kami rinci pilihan kita untuk keempat komponen ini.
 
+\section {Mengisi model hirarkis}
+Kelas HDDM menyusun DDM hirarkis yang ini nantinya sesuai dengan data RT dan pilihan subjek. 
+Dengan tidak memberikan argumen tambahan selain data, HDDM membuat model yang sederhana dengan tidak memperhitungkan kondisi yang  berbeda. 
+Untuk mempercepat konvergensi, titik awal diatur ke nilai a-posterior maksimum (MAP) dengan memanggil metode HDDM.find_starting_values yang menggunakan optimasi pendakian terhadap gradien. 
+Metode HDDM.sample () kemudian melakukan inferensi Bayesian dengan menggambar sampel posterior menggunakan algoritma MCMC.
+
+\begin{verbatim}
+
+# memberi contoh objek model yang melampaui data kita
+
+# ini akan menyesuaikan ddm hirarkis individu di sekitar kumpulan data
+
+m = hddm.HDDM (data)
+
+# temukan titik awal yang baik yang membantu konvergensi
+
+m.find_starting_values ()
+
+# mulai mengerjakan 2000 sampel dan membuang 20 dengan cara pembakaran
+
+m.sample (2000, burn=20)
+
+\end{verbatim}
