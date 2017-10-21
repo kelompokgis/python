@@ -1,25 +1,35 @@
 
-Python Decision Making 
+\section {Python Decision Making} 
 
  
-Pengambilan keputusan adalah antisipasi kondisi yang terjadi saat pelaksanaan program dan menentukan tindakan yang dilakukan sesuai kondisi. 
+dari sebuah artikel oleh I Nusawan yang menyebutkan bahwa Percabangan (decision making) adalah proses untuk memilih berbagai alternatif pilihan 
+berdasarkan beberapa kriteria. Di setiap pilihan, terdapat beberapa faktor dan kriteria yang akan dipertimbangkan dan beberapa alternatif pilihan yang
+harus diputuskan. 
 
- 
-Struktur keputusan mengevaluasi banyak ekspresi yang menghasilkan TRUE atau FALSE sebagai hasil.   Anda perlu menentukan tindakan mana yang harus diambil dan pernyataan mana yang akan dijalankan jika hasilnya BENAR atau SALAH sebaliknya. 
+Struktur keputusan mengevaluasi banyak ekspresi yang menghasilkan TRUE atau FALSE sebagai hasil.   Anda perlu menentukan tindakan mana yang harus 
+diambil dan pernyataan mana yang akan dijalankan jika hasilnya BENAR atau SALAH sebaliknya. Berikut adalah bentuk umum dari struktur pengambilan keputusan
+yang khas yang ditemukan di sebagian besar bahasa pemrograman Bahasa pemrograman Python mengasumsikan nilai   non-nol   dan   non-nullsebagai TRUE, 
+dan jika itu adalah nol atau nol, maka diasumsikan sebagai nilai FALSE. Bahasa pemrograman Python menyediakan jenis pernyataan pengambilan keputusan
 
- 
-Berikut adalah bentuk umum dari struktur pengambilan keputusan yang khas yang ditemukan di sebagian besar bahasa pemrograman  
+Bentuk umum perintah percabangan :
+if ( kondisi ) :
+	statemen 1
+else :
+	statemen 2
+	
+	Contoh Program :
+>>> kunci = "python"
+>>> password = raw_input("Masukkan Password : ")
+Masukkan Password : saya
+>>> if password == kunci:
+... print "Password Benar"
+... else:
+... print "Password Salah"
+...
+Password Salah
 
- 
-Bahasa pemrograman Python mengasumsikan nilai   non-nol   dan   non-nullsebagai TRUE, dan jika itu adalah   nol   atau   nol   , maka diasumsikan sebagai nilai FALSE. 
 
- 
-Bahasa pemrograman Python menyediakan jenis pernyataan pengambilan keputusan berikut.   Klik link berikut untuk memeriksa detailnya 
 
- 
-Mari kita membahas setiap keputusan secara singkat  
-
- 
 Setelah tutorial mengenai  
 {variable dan operator}
  pada bahasa pemrograman python, pada artikel ini saya akan menulis mengenai percabangan/pengambilan keputusan. Percabangan/pengambilan keputusan adalah pengkondisian yang terjadi ketika aplikasi berjalan, kemudian ada aksi-aksi tertentu atau kondisi tertentu sehingga aplikasi harus bereaksi terhadap hal itu. Atau dalam bahasa pemrograman umum dikenal dengan IF, THEN, ELSE. 
