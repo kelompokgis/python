@@ -313,7 +313,51 @@ Apabila program diatas Anda jalankan, maka akan menghasilkan output seperti di b
 9 
 10 
 
+Perintah while pada python merupakan perintah yang paling umum digunakan untuk proses
+iterasi. Konsep sederhana dari perintah while adalah ia akan mengulang mengeksekusi statemen dalam
+blok while selama nilai kondisinya benar. Dan ia akan keluar atau tidak melakukan eksekusi blok
+statemen jika nilai kondisinya salah.
+ Bentuk umum statemen while,
+ while (kondisi) :
+ statemen
+ Contoh penggunaan while :
+contoh 1 : 
+\begin{verbatim}
+>>> while True :
+ ... print "Tekan CTRL + C untuk Stop"
+ ...
+end{verbatim}
 
+Pada contoh 1, merupakan contoh sederhana penggunaan while. Pada contoh di atas
+program akan terus mengeksekusi statemen dalam badan while, dikarenakan kondisinya selalu
+benar (true). Kondisi seperti ini disebut infinite loop.i
+contoh 2 : 
+\begin{verbatim}
+>>> x = "Gunadarma"
+ >>> while x:
+ ... print x, ' '
+ ... x = x[1:]
+ ...
+ Gunadarma
+ unadarma
+ nadarma
+ adarma
+ darma
+ arma
+ rma
+ ma
+ a
+ end{verbatim}
+ 
+contoh 3 : 
+\begin{verbatim}
+>>> a = 0; b = 10
+ >>> while a < b :
+ ... print a,
+ ... a = a + 1
+ ...
+ 0 1 2 3 4 5 6 7 8 9
+ end{verbatim}
 
 Infinite Loop 
 
