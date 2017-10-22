@@ -359,6 +359,43 @@ contoh 3 :
  0 1 2 3 4 5 6 7 8 9
  end{verbatim}
 
+Perintah for dalam python mempunyai ciri khas tersendiri dibandingkan dengan bahasa
+pemrograman lain. Tidak hanya mengulang bilangan-bilangan sebuah ekspresi aritmatik, atau
+memberikan keleluasaan dalam mendefinisikan iterasi perulangan dan menghentikan perulangan pada
+saat kondisi tertentu. Dalam python, statemen for bekerja mengulang berbagai macam tipe data
+sekuensial seperti List, String, dan Tuple.
+ Bentuk umum perintah for,
+ for (variabel) in (objek) :
+ statemen
+ else:
+ statemen 
+ 
+ contoh 4:
+ \begin{verbatim}
+ >>> for i in [5, 4, 3, 2, 1]:
+ ... print i,
+ ...
+ 5 4 3 2 1 
+ end{verbatim}
+ 
+Pada contoh 1, perintah perulangan terjadi dimana data-data untuk iterasi (objek) berada
+dalam List. Jadi elemen-elemen yang berada dalam List akan di masukkan (assign) ke dalam variabel
+target yaitu i. 
+
+contoh 5
+\begin{verbatim}
+>>> T = [(1,2), (3,4), (5,6)]
+ >>> for (a,b) in T :
+ ... print (a,b)
+ ...
+ (1, 2)
+ (3, 4)
+ (5, 6) 
+ end{verbatim}
+ 
+Pada contoh 2, merupakan penggunaan tipe data Tuple untuk proses perulangan. Elemen
+pada tuple akan di assign kedalam variabel a dan b. 
+ 
 Infinite Loop 
 
 Infinite Loop adalah kondisi perulangan, dimana statement akan dijalankan terus menerus tanpa berhenti. Akan berhenti kalau Anda menekan tombol CTRL+C.
