@@ -87,44 +87,23 @@ while(i < 11):
 ~~~ print(i) 
 ~~~ i = i+1 
 \end{verbatim}
-Bandingkan kedua program diatas, Mana yang lebih efisien? Mana yang lebih simple?
 
-Ada 3 macam bentuk perulangan pada Python, yaitu: 
-FOR Loop 
-WHILE Loop 
-dan Loop bersarang (Nested Loop) 
-
-Selain membahas 3 bentuk perulangan diatas, tutorial ini juga membahas control perulangan, meliputi: 
+Selain membahas 3 jenis perulangan diatas, tutorial ini membahas control perulangan, yaitu: 
 Break Statement 
 Continue Statement 
 dan Pass Statement 
 
 
-FOR Loop 
+\subsection{FOR Loop} 
 FOR Loop digunakan untuk melakukan perulangan atau iterasi sampai batas atau range yang telah ditentukan.
-
 Dibawah ini adalah sintak dasar FOR Loop di Python.
 
- 
+\begin{verbatim} 
 for iterating     var in range: 
 ~~ statements(s) 
-
-Contoh Program
-
-Perhatikan contoh program For Loop pada Python:
-
-Contoh 1
-
- 
-Program mencetak angka 1 s/d 10 
-
-i = 10 
-for i in range(10): 
-~~ print(i+1) 
-~~ i = i+1 
+\end{verbatim}
 
 Fungsi   range()   biasanya digunakan sebagai counter pada perulangan bentuk For. range(10) artinya menampikan perulangan sebanyak 10 elemen.
-
 Apabila program diatas Anda jalankan, maka akan menampilkan angka 1 sampai dengan 10 seperti output di bawah ini:
 
  
@@ -138,16 +117,13 @@ Apabila program diatas Anda jalankan, maka akan menampilkan angka 1 sampai denga
 8 
 9 
 10 
-
-Contoh 2
-
  
  Program mencetak angka -1 s/d 8 
-
+\begin{verbatim}
 i = 10 
 for i in range(-10, 10, 2):       range(range awal, range akhir, selisih) 
 ~~ print(i) 
-
+\end{verbatim}
 
 Perhatikan pada range(-10, 10, 2) artinya perulangan akan dimulai dari batas awal -10 sampai dengan batas akhir 10 dengan selisih 2.
 
