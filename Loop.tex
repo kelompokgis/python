@@ -607,3 +607,30 @@ while~angka~>~0:~~~~~~~~~~
 Kami telah menerapkan eksekusi ini dalam simbolis inti loop-extended komponen yang dijelaskan sebelumnya di OCaml, dan format protokolnya. 
 Keterkaitannya di OCaml dikombinasikan dengan kode C dan Python untuk diintegrasikan dengan parser off-the-shelf. 
 Kami menggunakan biner yang ada analisis infrastruktur [4,42] untuk mengambil jejak eksekusi dan mendapatkan semantik instruksi x86.
+
+\section {For}
+Ini adalah (mungkin) perulangan yang paling sering dipakai dalam C++. Sintaknya adalah sebagai berikut:
+for (inisialisasi; kondisi; iterasi) yang ingin dilakukan...
+            Dalam for, anda bisa melakukan inisialisasi, yaitu mendeklarasikan variabel baru dan langsung memasukan nilai di dalamnya, kemudian memberi kondisi dimana perulangan itu akan terus dilakukan, dan pada akhirnya menentukan iterasi. Contoh dari for adalah sebagai berikut:
+
+#include 
+using namespace std;
+
+void main () {
+int num_masuk;
+cout << “berapa banyak anda mau melakukan perulangan?: “;
+cin >> num_masuk;
+
+for (int i = 1; i <= num_masuk; ++i) {
+cout << “ini adalah baris ke-“ << i << “\n” ;
+
+            Pada kode di atas, yang akan menjadi input dari user untuk menentukan berapa banyak perulangan akan dilakukan adalah num_masuk, dan variabel yang akan dijadikan patokan dalam perulangan adalah i, di mana i di buat di dalam perintah for dan kemudian langsung di assign (inisialisasi).
+            Kondisi yang digunakan adalah kondisi dimana i <= num_masuk yang berarti, jika / selama i lebih kecil atau sama dengan num_masuk maka perulangan akan terus dilakukan. Iteasi yang ditentukan di sini adalah nilai dari i akan ditambah 1 (satu) dalam setiap perulangan (++i).
+
+
+Contoh program yang sudah di compile dari kode ini adalah:
+Namun for juga bisa digunakan sebagai berikut:
+for (int i = 1; i <= 10; ++i) {
+for (int j = 1; j <= 10; ++j) {
+cout << i * j << “\n”;
+
