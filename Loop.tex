@@ -7,135 +7,64 @@ Secara umum, pernyataan pada bahasa pemrograman akan dieksekusi secara berurutan
  
 
 
-Di dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 bagian, yaitu : 
- 
+Dalam bahasa pemrograman Python pengulangan dibagi menjadi 3 jenis, yaitu : 
+\begin{enumerate}
+\item
 While Loop 
- 
+\item
 For Loop 
- 
+\item
 Nested Loop 
+\end{enumerate}
+
+
+
+
+\section {While Loop} 
+Pengulangan While Loop di dalam bahasa pemrograman Python dieksesusi statement berkali-kali selama kondisi tersebut benar atau True. 
+Berikut adalah contoh penggunaan pengulangan While Loop.
  
 
-
-
- 
-While Loop 
- 
-Pengulangan While Loop di dalam bahasa pemrograman Python dieksesusi statement berkali-kali selama kondisi bernilai benar atau True. 
- 
-
-
-Dibawah ini adalah contoh penggunaan pengulangan While Loop. 
- 
-
-
- 
-Contoh penggunaan While Loop 
- 
-
-
+\begin {verbatim}
 count = 0 
- 
-
 while (count < 9): 
- 
-
         print ('The count is:', count) 
- 
-
         count = count + 1 
- 
-
-
 print ("Good bye!") 
- 
+\end{verbatim} 
 
 
 
 
  
-For Loop 
- 
+\section {For Loop} 
 Pengulangan For pada Python memiliki kemampuan untuk mengulangi item dari urutan apapun, seperti   list atau string. 
- 
- 
-
-Dibawah ini adalah contoh penggunaan pengulangan While Loop. 
- 
-
-
- 
-Contoh pengulangan for sederhana 
- 
-
+Berikut adalah contoh penggunaan pengulangan For Loop. 
+\begin {verbatim}
 angka = [1,2,3,4,5] 
- 
-
 for x in angka: 
- 
-
-        print(x) 
- 
-
-
-Contoh pengulangan for 
- 
-
-buah = ["nanas", "apel", "jeruk"] 
- 
-
-for makanan in buah: 
- 
-
-        print("Saya suka makan", makanan) 
- 
-
-
-
- 
+        print(x)
+		
+		
+		
 Nested Loop 
-
- 
 Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut.   
-
-Dibawah ini adalah contoh penggunaan Nested Loop. 
- 
-Contoh penggunaan Nested Loop 
- 
+Berikut adalah contoh penggunaan Nested Loop. 
 
 
+\begin{verbatim}
 i = 2 
- 
-
 while(i < 100): 
- 
-
         j = 2 
- 
-
         while(j <= (i/j)): 
- 
-
                 if not(i   \%  j): break 
- 
-
                 j = j + 1 
- 
-
         if (j > i/j) : print i, " is prime" 
- 
-
         i = i + 1 
- 
-
-
 print "Good bye!" 
-
-
+\end{verbatim}
 Perhatikan contoh berikut ini:
-
- 
-
+\begin{verbatim}
 print ("1") 
 print ("2") 
 print ("3") 
@@ -146,19 +75,18 @@ print ("7")
 print ("8") 
 print ("9") 
 print ("10") 
+\end{verbatim}
 
+Contoh koding diatas merupakan contoh program untuk menampilkan angka 1 sampai dengan 10 tanpa perulangan. Tanpa menggunakan perulangan, programmer harus menuliskan semua statement secara manual sehingga source code menjadi lebih panjang.
+Dengan menggunakan perulangan, source code lebih pendek dan efisien. 
+Berikut contoh program untuk mencetak angka 1 sampai dengan 10 dengan menggunakan perulangan.
 
-Contoh program diatas adalah program untuk menampilkan angka 1 sampai dengan 10 tanpa perulangan. Tanpa menggunakan perulangan, programmer harus menuliskan semua statement diatas sehingga source code menjadi lebih banyak dan tidak efisien. Bayangkan kalau programmer disuruh menampilkan angka 1 sampai dengan 1000000 tanpa menggunakan perulangan
-
-Dengan menggunakan perulangan, source code lebih pendek dan efisien. Perhatikan contoh program untuk mencetak angka 1 sampai dengan 10 dengan menggunakan konsep perulangan di bawah ini.
-
- 
-
+\begin{verbatim}
 i = 1 
 while(i < 11): 
 ~~~ print(i) 
 ~~~ i = i+1 
-
+\end{verbatim}
 Bandingkan kedua program diatas, Mana yang lebih efisien? Mana yang lebih simple?
 
 Ada 3 macam bentuk perulangan pada Python, yaitu: 
