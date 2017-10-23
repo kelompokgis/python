@@ -395,6 +395,58 @@ contoh 5
  
 Pada contoh 2, merupakan penggunaan tipe data Tuple untuk proses perulangan. Elemen
 pada tuple akan di assign kedalam variabel a dan b. 
+
+Perintah break digunakan untuk menghentikan jalannya proses iterasi pada statemen for
+atau while. Statemen yang berada di bawah break tidak akan di eksekusi dan program akan keluar dari
+proses looping. 
+
+contoh break
+
+\begin{verbatim}
+>>> x = 1
+ >>> while x < 5:
+ ... if x == 3:
+ ... break
+ ... print x
+ ... x = x+1 
+ ... else:
+ print "Loop sdh selesai dikrjkn"
+ ...
+ 1
+ 2 
+ end{verbatim}
+ 
+ perintah continue
+Statemen continue menyebabkan alur program kembali ke perintah looping. Jadi jika
+dalam sebuah perulangan terdapat statemen continue, maka program akan kembali ke perintah looping
+untuk iterasi selanjutnya. 
+contoh continue
+
+\begin{verbatim}
+>>> n = 10
+ >>> while n:
+ ... n = n - 1
+ ... if n % 2 != 0:
+ ... continue
+ ... print n
+ ...
+ 8
+ 6
+ 4
+ 2 
+ end{verbatim}
+ 
+perintah pass
+Statemen pass mengakibatkan program tidak melakukan tindakan apa-apa. Perintah pass
+biasanya digunakan untuk mengabaikan suatu blok statemen perulangan, pengkondisian, class, dan
+fungsi yang belum didefinisikan badan programnya agar tidak terjadi error ketika proses compilasi. 
+
+contoh pass
+\begin{verbatim}
+#program tidak akan melakukan
+ #proses looping
+ while True : pass 
+end{verbatim}
  
 Infinite Loop 
 
