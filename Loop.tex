@@ -596,3 +596,26 @@ Ini termasuk program yang ditargetkan oleh Slammer yang terkenal worm pada tahun
 Untuk ghttpd, alat kita menemukan dua kerentanan buffer overflow di fungsi Log di util.c. 
 Salah satunya dijelaskan pada penelitian terdahulu menggunakan program subjek ini. Overflow baru melibatkan yang terpisah penyangga dan butuh perbaikan terpisah. 
 
+/section {WHILE And WEND}
+Proses loop dengan statement WHILE ... WEND juga akan membentuk sebuah blok loop. Blok WHILE ... WEND sama dengan blok DO WHILE ... LOOP.
+
+Bentuk dasarnya adalah :
+   WHILE ekspresi_kondisi
+      'baris kode yang di-loop
+   WEND
+
+Contohnya adalah prosedur bernama Contoh1_DoWhileLoop di atas dapat ditulis dalam blok WHILE ... WEND menjadi :
+   Public Sub Contoh1_WhileWend()
+      Dim lNomor As Long, lBaris As Long
+    
+      'hapus yang lama dulu ya
+      Sheets("Dataku").Columns(13).ClearContents
+    
+      'mulai proses contoh
+      lNomor = 3
+      While lNomor <= 8
+         lBaris = lNomor + 2
+         Sheets("Dataku").Range("M" & lBaris).Value = lNomor
+         lNomor = lNomor + 1
+      Wend
+   End Sub
