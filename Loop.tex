@@ -351,6 +351,55 @@ contoh pass
  #proses looping
  while True : pass 
 end{verbatim}
+
+Perulangan while
+Perulangan while akan mengulang didalam ruang lingkup while, selama suatu kondisi terpenuhi. 
+
+contoh perulangan while
+\begin{verbatim}
+>>> n = 9
+>>> while n < 20 :
+... print n
+... n = n + 1
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+end{verbatim}
+
+Pada contoh diatas, nilai variabel n akan ditambahkan 1 secara terus menerus sampai kondisi
+n lebih kecil dari 20. 
+
+Fungsi range()
+Jika Anda ingin melakukan perulangan sejumlah yang diinginkan, fungsi built-in range sangat
+membantu. Fungsi tersebut menghasilkan sejumlah indeks dari nilai yang telah ditentukan.
+contohnya
+
+\begin{verbatim}
+>>> range(15)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+end{verbatim}
+Ataupun sebagian angka yang diinginkan.
+
+contohnya
+\begin{verbatim}
+>>> range (8, 15)
+[8, 9, 10, 11, 12, 13, 14]
+>>> range(0,9,3)
+[0, 3, 6]
+>>> range(0, 20, 3)
+[0, 3, 6, 9, 12, 15, 18] 
+end{verbatim}
+Contoh diatas menunjukan kelipatan dari suatu interval bilangan yang mempunyai sintaks
+range(<nilai-awal>, <nilai-akhir>, <kelipatan-angka>). 
+
  
 Infinite Loop 
 
