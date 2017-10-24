@@ -1,399 +1,369 @@
  
-LISTS \par
-Struktur data yang paling dasar dengan Python adalah urutannya. Setiap elemen berurutan diberi nomor - posisinya atau indeksnya. Indeks pertama adalah nol, indeks kedua adalah satu, dan seterusnya. \par
-\vspace{12pt}
-Python memiliki enam jenis urutan built-in, namun yang paling umum adalah daftar dan tupel, yang akan kami lihat di tutorial ini. \par
-Ada beberapa hal yang dapat Anda lakukan dengan semua tipe urutan. Operasi ini meliputi pengindeksan, pengiris, penambahan, perbanyak, dan pengecekan keanggotaan. Selain itu, Python memiliki fungsi built-in untuk menemukan panjang urutan dan untuk menemukan elemen terbesar dan terkecilnya. \par
-\vspace{12pt}
-Daftar Python \par
-\vspace{12pt}
-Daftar ini adalah datatype paling serbaguna yang tersedia dengan Python yang dapat ditulis sebagai daftar nilai yang dipisahkan koma (item) antara tanda kurung siku. Hal penting tentang daftar adalah item dalam daftar tidak perlu jenis yang sama. \par
-Membuat daftar sesederhana memasukkan berbagai nilai yang dipisahkan koma di antara tanda kurung siku. Misalnya - \par
-\vspace{12pt}
-list1 = ['physics', 'chemistry', 1997, 2000]; \par
-list2 = [1, 2, 3, 4, 5 ]; \par
-list3 = ["a", "b", "c", "d"] \par
-Serupa dengan indeks string, daftar indeks mulai dari 0, dan daftar dapat diiris, digabungkan dan seterusnya. \par
-Mengakses Nilai dalam Daftar \par
-Untuk mengakses nilai dalam daftar, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya - \par
-\vspace{12pt}
-   \#  ! / Usr / bin / python \par
-\vspace{12pt}
-List1 = ['fisika', 'kimia', 1997, 2000]; \par
-List2 = [1, 2, 3, 4, 5, 6, 7]; \par
-\vspace{12pt}
-Cetak "list1 [0]:", list1 [0] \par
-Cetak "list2 [1: 5]:", list2 [1: 5] \par
-\vspace{12pt}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-\vspace{12pt}
-List1 [0]: fisika \par
-List2 [1: 5]: [2, 3, 4, 5] \par
-\vspace{12pt}
-Memperbarui Daftar \par
-\vspace{12pt}
-Anda dapat memperbarui satu atau beberapa elemen daftar dengan memberikan potongan di sisi kiri operator penugasan, dan Anda dapat menambahkan ke elemen dalam daftar dengan metode append (). Misalnya - \par
-\vspace{12pt}
-   \#  ! / Usr / bin / python \par
-\vspace{12pt}
-list = ['physics', 'chemistry', 1997, 2000]; \par
-\vspace{12pt}
-print "Value available at index 2 : " \par
-print list[2] \par
-list[2] = 2001; \par
-print "New value available at index 2 : " \par
-print list[2] \par
-Catatan: append () metode dibahas di bagian selanjutnya. \par
-\vspace{12pt}
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-Nilai tersedia di indeks 2: \par
-\vspace{12pt}
-1997 \par
-\vspace{12pt}
-Nilai baru tersedia di indeks 2: \par
-\vspace{12pt}
-2001 \par
-\vspace{12pt}
-Hapus Daftar Elemen \par
-\vspace{12pt}
-Untuk menghapus elemen daftar, Anda dapat menggunakan salah satu pernyataan del jika Anda tahu persis elemen yang Anda hapus atau metode hapus () jika Anda tidak mengetahuinya. Misalnya - \par
-\vspace{12pt}
-   \#  ! / Usr / bin / python \par
-\vspace{12pt}
-List1 = ['fisika', 'kimia', 1997, 2000]; \par
-\vspace{12pt}
-Daftar cetak1 \par
-\vspace{12pt}
-Del list1 [2]; \par
-\vspace{12pt}
-Cetak "Setelah menghapus nilai pada indeks 2:" \par
-\vspace{12pt}
-Daftar cetak1 \par
-Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - \par
-['Fisika', 'kimia', 1997, 2000] \par
-Setelah menghapus nilai pada indeks 2: \par
-['Fisika', 'kimia', 2000] \par
-Catatan: hapus () metode dibahas di bagian selanjutnya. \par
-Operasi Daftar Dasar \par
-Daftar merespons operator + dan * seperti string; Mereka berarti penggabungan dan pengulangan di sini juga, kecuali hasilnya adalah daftar baru, bukan string. \par
-Sebenarnya, daftar merespons semua operasi urutan umum yang kami gunakan pada senar di bab sebelumnya. \par
-Python Expression \hspace*{0.5in} Results  \hspace*{0.5in} Description \par
-len([1, 2, 3]) \hspace*{0.5in} 3 \hspace*{0.5in} Length \par
-[1, 2, 3] + [4, 5, 6] \hspace*{0.5in} [1, 2, 3, 4, 5, 6] \hspace*{0.5in} Concatenation \par
-['Hi!'] * 4 \hspace*{0.5in} ['Hi!', 'Hi!', 'Hi!', 'Hi!'] \hspace*{0.5in} Repetition \par
-3 in [1, 2, 3] \hspace*{0.5in} True \hspace*{0.5in} Membership \par
-for x in [1, 2, 3]: print x, \hspace*{0.5in} 1 2 3 \hspace*{0.5in} Iteration \par
-\vspace{12pt}
-Indexing, Slicing, dan Matrixes \par
-Karena daftar adalah urutan, pengindeksan dan pengiris bekerja dengan cara yang sama untuk daftar seperti yang mereka lakukan untuk string. \par
-Dengan asumsi masukan berikut - \par
-L = ['spam', 'Spam', 'SPAM!'] \par
-  \par
-Python Expression \hspace*{0.5in} Results  \hspace*{0.5in} Description \par
-L[2] \hspace*{0.5in} 'SPAM!' \hspace*{0.5in} Offsets start at zero \par
-L[-2] \hspace*{0.5in} 'Spam' \hspace*{0.5in} Negative: count from the right \par
-L[1:] \hspace*{0.5in} ['Spam', 'SPAM!'] \hspace*{0.5in} Slicing fetches sections \par
-Built-in List Functions  $  \&  $ Methods: \par
-Python includes the following list functions – \par
-\vspace{12pt}
-SN \hspace*{0.5in} Function with Description \par
-1 \hspace*{0.5in} cmp(list1, list2) \par
-\vspace{12pt}
-Compares elements of both lists. \par
-2 \hspace*{0.5in} len(list) \par
-\vspace{12pt}
-Gives the total length of the list. \par
-3 \hspace*{0.5in} max(list) \par
-\vspace{12pt}
-Returns item from the list with max value. \par
-4 \hspace*{0.5in} min(list) \par
-\vspace{12pt}
-Returns item from the list with min value. \par
-5 \hspace*{0.5in} list(seq) \par
-\vspace{12pt}
-Converts a tuple into list. \par
-Python includes following list methods \par
-SN \hspace*{0.5in} Methods with Description \par
-1 \hspace*{0.5in} list.append(obj) \par
-\vspace{12pt}
-Appends object obj to list \par
-2 \hspace*{0.5in} list.count(obj) \par
-\vspace{12pt}
-Returns count of how many times obj occurs in list \par
-3 \hspace*{0.5in} list.extend(seq) \par
-\vspace{12pt}
-Appends the contents of seq to list \par
-4 \hspace*{0.5in} list.index(obj) \par
-\vspace{12pt}
-Returns the lowest index in list that obj appears \par
-5 \hspace*{0.5in} list.insert(index, obj) \par
-\vspace{12pt}
-Inserts object obj into list at offset index \par
-6 \hspace*{0.5in} list.pop(obj=list[-1]) \par
-\vspace{12pt}
-Removes and returns last object or obj from list \par
-7 \hspace*{0.5in} list.remove(obj) \par
-\vspace{12pt}
-Removes object obj from list \par
-8 \hspace*{0.5in} list.reverse() \par
-\vspace{12pt}
-Reverses objects of list in place \par
-9 \hspace*{0.5in} list.sort([func]) \par
-\vspace{12pt}
-Sorts objects of list, use compare func if given \par
-\vspace{12pt}
-Python memiliki tipe daftar built-in yang hebat dengan nama "daftar". Daftar literal ditulis dalam tanda kurung siku []. Daftar bekerja sama dengan senar - gunakan fungsi len () dan tanda kurung siku [] untuk mengakses data, dengan elemen pertama di indeks 0. (Lihat daftar dokumen python.org resmi). \par
-\vspace{12pt}
-~ Warna = ['merah', 'biru', 'hijau'] \par
-~ cetak warna [0]    \#     \#   merah \par
-~ cetak warna [2]    \#     \#   hijau \par
-~ Cetak len (warna)    \#     \#   3 \par
-\vspace{12pt}
-\vspace{12pt}
-  \par
-Tugas dengan = daftar tidak membuat salinan. Sebagai gantinya, tugas membuat kedua variabel menunjuk ke satu daftar di memori. \par
-\vspace{12pt}
-~ B = warna    \#     \#   Tidak menyalin daftar \par
-  \par
-"Daftar kosong" hanyalah sepasang kurung kosong []. '+' Bekerja untuk menambahkan dua daftar, jadi [1, 2] + [3, 4] menghasilkan [1, 2, 3, 4] (ini sama seperti + dengan string). \par
-FOR dan IN \par
-\vspace{12pt}
-Python's * untuk * dan * in * constructs sangat berguna, dan penggunaan pertama dari yang akan kita lihat adalah dengan daftar. * Untuk * membangun - untuk daftar var - adalah cara mudah untuk melihat setiap elemen dalam daftar (atau koleksi lainnya). Jangan menambah atau menghapus dari daftar selama iterasi. \par
-\vspace{12pt}
-~ kotak = [1, 4, 9, 16] \par
-~ Jumlah = 0 \par
-~ Untuk num dalam kotak: \par
-~~~ Jumlah + = num \par
-~ Jumlah cetak \par
-\vspace{12pt}
-Jika Anda tahu hal macam apa yang ada dalam daftar, gunakan nama variabel dalam lingkaran yang menangkap informasi seperti "num", atau "name", atau "url". Karena kode python tidak memiliki sintaks lain untuk mengingatkan Anda tentang tipe, nama variabel Anda adalah cara kunci bagi Anda untuk tetap mempertahankan apa yang sedang terjadi. \par
-\vspace{12pt}
-* Dalam * membangun sendiri adalah cara mudah untuk menguji apakah sebuah elemen muncul dalam daftar (atau koleksi lainnya) - nilai dalam koleksi - tes jika nilainya ada dalam koleksi, mengembalikan True / False. \par
-\vspace{12pt}
-~ Daftar = ['larry', 'curly', 'moe'] \par
-~ jika 'keriting' dalam daftar: \par
-~~~ Cetak 'yay' \par
-\vspace{12pt}
-The for / in constructs sangat umum digunakan pada kode Python dan bekerja pada tipe data selain list, jadi sebaiknya hafalkan sintaksnya. Anda mungkin memiliki kebiasaan dari bahasa lain di mana Anda memulai pengulangan manual melalui koleksi, dengan Python yang seharusnya Anda gunakan untuk / in. \par
-\vspace{12pt}
-Anda juga dapat menggunakannya untuk / dalam mengerjakan sebuah string. String bertindak seperti daftar karakternya, jadi untuk ch di s: print ch mencetak semua karakter dalam sebuah string. \par
-Jarak \par
-\vspace{12pt}
-Fungsi range (n) menghasilkan angka 0, 1, ... n-1, dan range (a, b) mengembalikan a, a + 1, ... b-1 - sampai tapi tidak termasuk angka terakhir . Kombinasi fungsi for-loop dan range () memungkinkan Anda membuat numerik tradisional untuk loop: \par
-\vspace{12pt}
-\vspace{12pt}
-   \#     \#   print the numbers from 0 through 99 \par
-~ for i in range(100): \par
-~~~ print i \par
-\vspace{12pt}
-Ada varian xrange () yang menghindari biaya membangun keseluruhan daftar untuk kasus sensitif kinerja (dalam Python 3000, range () akan memiliki perilaku kinerja yang baik dan Anda dapat melupakan xrange ()). \par
-Sementara Loop \par
-\vspace{12pt}
-Python juga memiliki standar while-loop, dan * break * dan * continue * statements bekerja seperti di C ++ dan Java, mengubah jalannya loop terdalam. Di atas untuk / dalam loop memecahkan kasus umum iterasi pada setiap elemen dalam daftar, namun loop sementara memberi Anda kontrol penuh atas angka indeks. Berikut adalah loop sementara yang mengakses setiap elemen ke-3 dalam daftar: \par
-\vspace{12pt}
-~    \#     \#   Mengakses setiap elemen ke-3 dalam daftar \par
-~ I = 0 \par
-~ sementara i <len (a): \par
-~~~ cetak sebuah [i] \par
-~~~ i = i + 3 \par
-Daftar metode \par
-\vspace{12pt}
-Berikut adalah beberapa metode daftar umum lainnya. \par
-\vspace{12pt}
-~~~ List.append (elem) - menambahkan satu elemen ke akhir daftar. Kesalahan umum: tidak mengembalikan daftar baru, cukup modifikasi yang asli. \par
-~~~ List.insert (indeks, elem) - memasukkan elemen pada indeks yang diberikan, menggeser elemen ke kanan. \par
-~~~ List.extend (list2) menambahkan elemen dalam list2 ke akhir daftar. Menggunakan + atau + = pada daftar sama dengan menggunakan extend (). \par
-~~~ List.index (elem) - mencari elemen yang diberikan dari awal daftar dan mengembalikan indeksnya. Melempar ValueError jika elemen tidak muncul (gunakan "in" untuk memeriksa tanpa ValueError). \par
-~~~ List.remove (elem) - mencari instance pertama dari elemen yang diberikan dan menghapusnya (melempar ValueError jika tidak ada) \par
-~~~ List.sort () - menyusun daftar di tempat (tidak mengembalikannya). (Fungsi yang diurutkan () yang ditunjukkan di bawah ini lebih diutamakan.) \par
-~~~ List.reverse () - membalik daftar di tempat (tidak mengembalikannya) \par
-~~~ List.pop (index) - menghapus dan mengembalikan elemen pada indeks yang diberikan. Mengembalikan elemen paling kanan jika indeks dihilangkan (kira-kira kebalikan dari append ()). \par
-\vspace{12pt}
-Perhatikan bahwa ini adalah * metode * pada daftar objek, sedangkan len () adalah fungsi yang mengambil daftar (atau string atau apapun) sebagai argumen. \par
-\vspace{12pt}
-\vspace{12pt}
-Daftar = ['larry', 'curly', 'moe'] \par
-~ List.append ('shemp')    \#     \#   append elem di akhir \par
-~ List.insert (0, 'xxx')    \#     \#   masukkan elem pada indeks 0 \par
-~ list.extend (['yyy', 'zzz'])    \#     \#   tambahkan daftar elems at end \par
-~ daftar cetak    \#     \#   ['xxx', 'larry', 'curly', 'moe', 'shemp', 'yyy', 'zzz'] \par
-~ Print list.index ('keriting')    \#     \#   2 \par
-\vspace{12pt}
-~ List.remove ('curly')    \#     \#   cari dan hapus elemen itu \par
-~ List.pop (1)    \#     \#   menghapus dan mengembalikan 'larry' \par
-~ daftar cetak    \#     \#   ['xxx', 'moe', 'shemp', 'yyy', 'zzz'] \par
-\vspace{12pt}
-Kesalahan umum: perhatikan bahwa metode di atas tidak * mengembalikan * daftar yang dimodifikasi, mereka hanya memodifikasi daftar aslinya. \par
-\vspace{12pt}
-~ Daftar = [1, 2, 3] \par
-~ Print list.append (4)    \#     \#   TIDAK, tidak bekerja, append () return Tidak ada \par
-~    \#     \#   Pola yang benar: \par
-~ List.append (4) \par
-~ Daftar cetak    \#     \#   [1, 2, 3, 4] \par
-st Build Up \par
-\vspace{12pt}
-Salah satu pola yang umum adalah dengan memulai daftar daftar kosong [], lalu gunakan append () atau extend () untuk menambahkan elemen ke dalamnya: \par
-\vspace{12pt}
-~ List = []    \#     \#   Mulai sebagai daftar kosong \par
-~ List.append ('a')    \#     \#   Gunakan append () untuk menambahkan elemen \par
-~ List.append ('b') \par
-\vspace{12pt}
-Daftar irisan \par
-\vspace{12pt}
-Slice bekerja pada daftar seperti halnya senar, dan juga dapat digunakan untuk mengubah sub-bagian daftar. \par
-\vspace{12pt}
-~ Daftar = ['a', 'b', 'c', 'd'] \par
-~ Daftar cetak [1: -1]    \#     \#   ['b', 'c'] \par
-~ Daftar [0: 2] = 'z'    \#     \#   ganti ['a', 'b'] dengan ['z'] \par
-~ Daftar cetak    \#     \#   ['z', 'c', 'd'] \par
-Tipe data daftar memiliki beberapa metode lagi. Berikut adalah semua metode daftar objek: \par
-\vspace{12pt}
-List.append (x) \par
-\vspace{12pt}
-~~~ Tambahkan item ke bagian akhir daftar. Setara dengan [len (a):] = [x]. \par
-\vspace{12pt}
-list.extend (iterable) \par
-\vspace{12pt}
-~~~ Perluas daftar dengan menambahkan semua item dari iterable. Setara dengan [len (a):] = iterable. \par
-\vspace{12pt}
-list.insert (i, x) \par
-\vspace{12pt}
-~~~ Masukkan item pada posisi tertentu. Argumen pertama adalah indeks dari elemen yang sebelum dimasukkan, jadi a.insert (0, x) memasukkan di bagian depan daftar, dan a.insert (len (a), x) setara dengan a.append ( x). \par
-\vspace{12pt}
-List.remove (x) \par
-\vspace{12pt}
-~~~ Hapus item pertama dari daftar yang nilainya x. Ini adalah kesalahan jika tidak ada item seperti itu. \par
-\vspace{12pt}
-List.pop ([i]) \par
-\vspace{12pt}
-~~~ Hapus item pada posisi yang diberikan dalam daftar, dan kembalikan. Jika tidak ada indeks yang ditentukan, a.pop () menghapus dan mengembalikan item terakhir dalam daftar. (Tanda kurung siku di sekitar i pada tanda tangan metode menunjukkan bahwa parameternya adalah opsional, bukankah Anda harus mengetikkan tanda kurung siku pada posisi itu. Anda akan sering melihat notasi ini di Referensi Perpustakaan Python.) \par
-\vspace{12pt}
-List.clear () \par
-\vspace{12pt}
-~~~ Hapus semua item dari daftar. Setara dengan del a [:]. \par
-\vspace{12pt}
-List.index (x [, start [, end]]) \par
-\vspace{12pt}
-~~~ Kembalikan indeks berbasis nol dalam daftar item pertama yang nilainya x. Meningkatkan ValueError jika tidak ada item seperti itu. \par
-\vspace{12pt}
-~~~ Argumen dan argumen opsional dimulai dengan interpretasi seperti notasi irisan dan digunakan untuk membatasi pencarian ke urutan berikutnya dari daftar. Indeks yang dikembalikan dihitung relatif terhadap awal urutan penuh daripada argumen awal. \par
-\vspace{12pt}
-List.count (x) \par
-\vspace{12pt}
-~~~ Kembalikan berapa kali x muncul dalam daftar. \par
-\vspace{12pt}
-List.sort (key = None, reverse = False) \par
-\vspace{12pt}
-~~~ Urutkan item daftar di tempat (argumen dapat digunakan untuk kustomisasi sortir, lihat diurutkan () untuk penjelasan mereka). \par
-\vspace{12pt}
-List.reverse () \par
-\vspace{12pt}
-~~~ Membalikkan unsur daftar di tempat. \par
-\vspace{12pt}
-List.copy () \par
-\vspace{12pt}
-~~~ Kembalikan salinan daftar yang dangkal. Setara dengan [:]. \par
-\vspace{12pt}
-Contoh yang menggunakan sebagian besar metode daftar: \par
-\vspace{12pt}
->>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana'] \par
->>> fruits.count('apple') \par
-2 \par
->>> fruits.count('tangerine') \par
-0 \par
->>> fruits.index('banana') \par
-3 \par
->>>~fruits.index('banana', 4)     \#   Find next banana starting a position 4 \par
-6 \par
->>> fruits.reverse() \par
->>> fruits \par
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange'] \par
->>> fruits.append('grape') \par
->>> fruits \par
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape'] \par
->>> fruits.sort() \par
->>> fruits \par
-['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear'] \par
->>> fruits.pop() \par
-'pear' \par
-\vspace{12pt}
-mungkin telah memperhatikan bahwa metode seperti insert, remove atau sortir yang hanya memodifikasi daftar tidak memiliki nilai pengembalian tercetak - mereka mengembalikan default None. [1] Ini adalah prinsip desain untuk semua struktur data yang bisa berubah dengan Python. \par
-\vspace{12pt}
->>> stack = [3, 4, 5] \par
->>> stack.append (6) \par
->>> stack.append (7) \par
->>> susun \par
-[3, 4, 5, 6, 7] \par
->>> stack.pop () \par
-7 \par
->>> susun \par
-[3, 4, 5, 6] \par
->>> stack.pop () \par
-6 \par
->>> stack.pop () \par
-5 \par
->>> susun \par
-[3, 4] \par
-\vspace{12pt}
-5.1.2. Menggunakan Daftar sebagai Antrian \par
-\vspace{12pt}
-Hal ini juga memungkinkan untuk menggunakan daftar sebagai antrian, di mana elemen pertama yang ditambahkan adalah elemen pertama yang diambil ("first-in, first-out"); Namun, daftar tidak efisien untuk tujuan ini. Sementara menambahkan dan muncul dari akhir daftar dengan cepat, melakukan sisipan atau muncul dari awal daftar lambat (karena semua elemen lainnya harus digeser oleh satu). \par
-\vspace{12pt}
-Untuk menerapkan antrean, gunakan collections.deque yang dirancang agar cepat ditambahkan dan muncul dari kedua ujungnya. Sebagai contoh: \par
->>> \par
-\vspace{12pt}
->>> dari koleksi import deque \par
->>> antrian = deque (["Eric", "John", "Michael"]) \par
->>> queue.append ("Terry")    \#   Terry tiba \par
->>> queue.append ("Graham")    \#   Graham tiba \par
->>> queue.popleft ()    \#   Yang pertama tiba sekarang pergi \par
-'Eric' \par
->>> queue.popleft ()    \#   Yang kedua tiba sekarang pergi \par
-'John' \par
->>> antrian    \#   Sisa antrian sesuai urutan kedatangan \par
-deque (['Michael', 'Terry', 'Graham']) \par
-\vspace{12pt}
+\section{LISTS}
 
-\section {list}
-List adalah tipe data python yang paling umum digunakan untuk dasar. 
-Penulisanya dibuka dengan kurung siku, dan ditutup pula oleh kurung siku. Setiap datayang  ada dalam list dipisahkan oleh tanda koma. 
-Setiap data yang ada dalam list, diperbolehkan memiliki tipe data yang berbeda. Berikut ini adalah contoh list dalam Python :
+Dalam sebuah artikel oleh Rendy Andrianto yang menyatakan bahwa list merupakan suatu bentuk struktur data yang bisa mengandung sejumlah elemen dengan tipe 
+yang berbeda-beda dan memungkinkan penambahan atau pengurangan  elemenennya. \cite{andrianto2011aplikasi}
 
-\begin {verbatim}
-list1 = ['hello','world', 1,2,3];
+Teknik penggunaan struktur data yang paling dasar dengan Python adalah urutan (list). Setiap elemen yang berurutan diberikan nomor atau posisi atau indeksnya. 
+Indeks pertama adalah nol, indeks kedua adalah satu, dan seterusnya.
 
-print "list 1:", list1[0]
-print "list 3-5:", list1[2:5]
-\end {verbatim}
+Python memiliki enam jenis urutan built-in, namun yang paling umum adalah daftar dan tupel. Ada beberapa hal yang dapat Anda lakukan dengan semua tipe urutan.
+Operasi ini meliputi pengindeksan, pengiris, penambahan, perbanyak, dan pengecekan keanggotaan. Selain itu, Python memiliki fungsi built-in untuk menemukan 
+panjang urutan dan untuk menemukan elemen terbesar dan terkecil. 
 
-\section {Fungsi dan Method yang terdapat pada List}
-Adapun macam-macam fungsi bawaan yang terdapat pada list yaitu :
-	len(list)
- max(list)
- min(list)
- list(tuples)
+\subsection{Daftar Python} 
+
+Daftar python adalah type data paling serba guna yang tersedia dengan Python yang dapat ditulis sebagai daftar nilai yang dipisahkan koma (item) antara tanda 
+kurung siku. Hal penting tentang daftar adalah item dalam daftar tidak perlu jenis yang sama. Membuat daftar sesederhana memasukkan berbagai nilai yang 
+dipisahkan koma di antara tanda kurung siku. 
+
+\begin{verbatim}
+list1 = ['physics', 'chemistry', 1997, 2000]; 
+list2 = [1, 2, 3, 4, 5 ]; 
+list3 = ["a", "b", "c", "d"]
+\end{verbatim} 
+
+Serupa dengan tipe data string, daftar indeks mulai dari 0, dan daftar dapat diiris, digabungkan dan sebagainya.
  
- Method pada List
- Sedangkan di bawah ini adalah macam-macam method yang terdapat pada list yaitu:
- list.append(obj)
- list.count(obj)
- list.extend(seq)
- list.index(obj)
- list.insert(index,obj)
- list.pop(obj=list[-1])
- list.remove(obj)
- list.reverse()
- list.sort([func])
+Mengakses Nilai dalam Daftar 
 
-salah satu contoh fungsi list yaitu :
-len(list)
-Fungsi len(list) digunakan untuk menghitung panjang sebuah list.
-Contoh Program
-#Nama File : 
-\begin {verbatim}list_len.py
+Untuk mengakses nilai dalam daftar, gunakan tanda kurung siku untuk mengiris beserta indeks atau indeks untuk mendapatkan nilai yang tersedia pada indeks tersebut. Misalnya - 
 
-list1, list2 = [123, 'xyz', 'zara'], [456, 'abc']
+\begin{verbatim}
+     ! / Usr / bin / python 
 
-print ("Panjang list1 : ", len(list1))
-print ("Panjang list2 : ", len(list2))
-end{verbatim}
+List1 = ['fisika', 'kimia', 1997, 2000]; 
+List2 = [1, 2, 3, 4, 5, 6, 7]; 
+
+Cetak "list1 [0]:", list1 [0] 
+Cetak "list2 [1: 5]:", list2 [1: 5] 
+\end{verbatim}
+
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+
+\begin{verbatim}
+List1 [0]: fisika 
+List2 [1: 5]: [2, 3, 4, 5] 
+\end{verbatim}
+\subsection{Memperbarui Daftar}
+
+Anda dapat memperbarui satu atau beberapa elemen daftar dengan memberikan potongan di sisi kiri operator penugasan, dan Anda dapat menambahkan ke elemen dalam daftar dengan metode append (). Misalnya - 
+
+\begin{verbatim}
+     ! / Usr / bin / python 
+
+list = ['physics', 'chemistry', 1997, 2000]; 
+
+print "Value available at index 2 : " 
+print list[2] 
+list[2] = 2001; 
+print "New value available at index 2 : " 
+print list[2] 
+Catatan: append () metode dibahas di bagian selanjutnya. 
+\end{verbatim}
+
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+
+Nilai tersedia di indeks 2: 
+
+1997 
+
+Nilai baru tersedia di indeks 2: 
+
+2001 
+
+\subsection{Hapus Daftar Elemen} 
+
+Untuk menghapus elemen daftar, Anda dapat menggunakan salah satu pernyataan del jika Anda tahu persis elemen yang Anda hapus atau metode hapus () jika Anda tidak mengetahuinya. Misalnya - 
+
+\begin{verbatim}
+     ! / Usr / bin / python 
+
+List1 = ['fisika', 'kimia', 1997, 2000]; 
+
+Daftar cetak1 
+
+Del list1 [2]; 
+
+Cetak "Setelah menghapus nilai pada indeks 2:" 
+\end{verbatim}
+
+Daftar cetak1 
+Bila kode diatas dieksekusi, maka menghasilkan hasil sebagai berikut - 
+['Fisika', 'kimia', 1997, 2000] 
+Setelah menghapus nilai pada indeks 2: 
+['Fisika', 'kimia', 2000] 
+Catatan: hapus () metode dibahas di bagian selanjutnya. 
+Operasi Daftar Dasar 
+Daftar merespons operator + dan * seperti string; Mereka berarti penggabungan dan pengulangan di sini juga, kecuali hasilnya adalah daftar baru, bukan string. 
+Sebenarnya, daftar merespons semua operasi urutan umum yang kami gunakan pada senar di bab sebelumnya. 
+Python Expression *{0.5in} Results  *{0.5in} Description 
+len([1, 2, 3]) *{0.5in} 3 *{0.5in} Length 
+[1, 2, 3] + [4, 5, 6] *{0.5in} [1, 2, 3, 4, 5, 6] *{0.5in} Concatenation 
+['Hi!'] * 4 *{0.5in} ['Hi!', 'Hi!', 'Hi!', 'Hi!'] *{0.5in} Repetition 
+3 in [1, 2, 3] *{0.5in} True *{0.5in} Membership 
+for x in [1, 2, 3]: print x, *{0.5in} 1 2 3 *{0.5in} Iteration 
+
+Indexing, Slicing, dan Matrixes 
+Karena daftar adalah urutan, pengindeksan dan pengiris bekerja dengan cara yang sama untuk daftar seperti yang mereka lakukan untuk string. 
+Dengan asumsi masukan berikut - 
+L = ['spam', 'Spam', 'SPAM!'] 
+  
+Python Expression *{0.5in} Results  *{0.5in} Description 
+L[2] *{0.5in} 'SPAM!' *{0.5in} Offsets start at zero 
+L[-2] *{0.5in} 'Spam' *{0.5in} Negative: count from the right 
+L[1:] *{0.5in} ['Spam', 'SPAM!'] *{0.5in} Slicing fetches sections 
+Built-in List Functions       Methods: 
+Python includes the following list functions – 
+
+SN *{0.5in} Function with Description 
+1 *{0.5in} cmp(list1, list2) 
+
+Compares elements of both lists. 
+2 *{0.5in} len(list) 
+
+Gives the total length of the list. 
+3 *{0.5in} max(list) 
+
+Returns item from the list with max value. 
+4 *{0.5in} min(list) 
+
+Returns item from the list with min value. 
+5 *{0.5in} list(seq) 
+
+Converts a tuple into list. 
+Python includes following list methods 
+SN *{0.5in} Methods with Description 
+1 *{0.5in} list.append(obj) 
+
+Appends object obj to list 
+2 *{0.5in} list.count(obj) 
+
+Returns count of how many times obj occurs in list 
+3 *{0.5in} list.extend(seq) 
+
+Appends the contents of seq to list 
+4 *{0.5in} list.index(obj) 
+
+Returns the lowest index in list that obj appears 
+5 *{0.5in} list.insert(index, obj) 
+
+Inserts object obj into list at offset index 
+6 *{0.5in} list.pop(obj=list[-1]) 
+
+Removes and returns last object or obj from list 
+7 *{0.5in} list.remove(obj) 
+
+Removes object obj from list 
+8 *{0.5in} list.reverse() 
+
+Reverses objects of list in place 
+9 *{0.5in} list.sort([func]) 
+
+Sorts objects of list, use compare func if given 
+
+Python memiliki tipe daftar built-in yang hebat dengan nama "daftar". Daftar literal ditulis dalam tanda kurung siku []. Daftar bekerja sama dengan senar - gunakan fungsi len () dan tanda kurung siku [] untuk mengakses data, dengan elemen pertama di indeks 0. (Lihat daftar dokumen python.org resmi). 
+
+~ Warna = ['merah', 'biru', 'hijau'] 
+~ cetak warna [0]            merah 
+~ cetak warna [2]            hijau 
+~ Cetak len (warna)            3 
+
+
+  
+Tugas dengan = daftar tidak membuat salinan. Sebagai gantinya, tugas membuat kedua variabel menunjuk ke satu daftar di memori. 
+
+~ B = warna            Tidak menyalin daftar 
+  
+"Daftar kosong" hanyalah sepasang kurung kosong []. '+' Bekerja untuk menambahkan dua daftar, jadi [1, 2] + [3, 4] menghasilkan [1, 2, 3, 4] (ini sama seperti + dengan string). 
+FOR dan IN 
+
+Python's * untuk * dan * in * constructs sangat berguna, dan penggunaan pertama dari yang akan kita lihat adalah dengan daftar. * Untuk * membangun - untuk daftar var - adalah cara mudah untuk melihat setiap elemen dalam daftar (atau koleksi lainnya). Jangan menambah atau menghapus dari daftar selama iterasi. 
+
+~ kotak = [1, 4, 9, 16] 
+~ Jumlah = 0 
+~ Untuk num dalam kotak: 
+~~~ Jumlah + = num 
+~ Jumlah cetak 
+
+Jika Anda tahu hal macam apa yang ada dalam daftar, gunakan nama variabel dalam lingkaran yang menangkap informasi seperti "num", atau "name", atau "url". Karena kode python tidak memiliki sintaks lain untuk mengingatkan Anda tentang tipe, nama variabel Anda adalah cara kunci bagi Anda untuk tetap mempertahankan apa yang sedang terjadi. 
+
+* Dalam * membangun sendiri adalah cara mudah untuk menguji apakah sebuah elemen muncul dalam daftar (atau koleksi lainnya) - nilai dalam koleksi - tes jika nilainya ada dalam koleksi, mengembalikan True / False. 
+
+~ Daftar = ['larry', 'curly', 'moe'] 
+~ jika 'keriting' dalam daftar: 
+~~~ Cetak 'yay' 
+
+The for / in constructs sangat umum digunakan pada kode Python dan bekerja pada tipe data selain list, jadi sebaiknya hafalkan sintaksnya. Anda mungkin memiliki kebiasaan dari bahasa lain di mana Anda memulai pengulangan manual melalui koleksi, dengan Python yang seharusnya Anda gunakan untuk / in. 
+
+Anda juga dapat menggunakannya untuk / dalam mengerjakan sebuah string. String bertindak seperti daftar karakternya, jadi untuk ch di s: print ch mencetak semua karakter dalam sebuah string. 
+Jarak 
+
+Fungsi range (n) menghasilkan angka 0, 1, ... n-1, dan range (a, b) mengembalikan a, a + 1, ... b-1 - sampai tapi tidak termasuk angka terakhir . Kombinasi fungsi for-loop dan range () memungkinkan Anda membuat numerik tradisional untuk loop: 
+
+
+           print the numbers from 0 through 99 
+~ for i in range(100): 
+~~~ print i 
+
+Ada varian xrange () yang menghindari biaya membangun keseluruhan daftar untuk kasus sensitif kinerja (dalam Python 3000, range () akan memiliki perilaku kinerja yang baik dan Anda dapat melupakan xrange ()). 
+Sementara Loop 
+
+Python juga memiliki standar while-loop, dan * break * dan * continue * statements bekerja seperti di C ++ dan Java, mengubah jalannya loop terdalam. Di atas untuk / dalam loop memecahkan kasus umum iterasi pada setiap elemen dalam daftar, namun loop sementara memberi Anda kontrol penuh atas angka indeks. Berikut adalah loop sementara yang mengakses setiap elemen ke-3 dalam daftar: 
+
+~            Mengakses setiap elemen ke-3 dalam daftar 
+~ I = 0 
+~ sementara i <len (a): 
+~~~ cetak sebuah [i] 
+~~~ i = i + 3 
+Daftar metode 
+
+Berikut adalah beberapa metode daftar umum lainnya. 
+
+~~~ List.append (elem) - menambahkan satu elemen ke akhir daftar. Kesalahan umum: tidak mengembalikan daftar baru, cukup modifikasi yang asli. 
+~~~ List.insert (indeks, elem) - memasukkan elemen pada indeks yang diberikan, menggeser elemen ke kanan. 
+~~~ List.extend (list2) menambahkan elemen dalam list2 ke akhir daftar. Menggunakan + atau + = pada daftar sama dengan menggunakan extend (). 
+~~~ List.index (elem) - mencari elemen yang diberikan dari awal daftar dan mengembalikan indeksnya. Melempar ValueError jika elemen tidak muncul (gunakan "in" untuk memeriksa tanpa ValueError). 
+~~~ List.remove (elem) - mencari instance pertama dari elemen yang diberikan dan menghapusnya (melempar ValueError jika tidak ada) 
+~~~ List.sort () - menyusun daftar di tempat (tidak mengembalikannya). (Fungsi yang diurutkan () yang ditunjukkan di bawah ini lebih diutamakan.) 
+~~~ List.reverse () - membalik daftar di tempat (tidak mengembalikannya) 
+~~~ List.pop (index) - menghapus dan mengembalikan elemen pada indeks yang diberikan. Mengembalikan elemen paling kanan jika indeks dihilangkan (kira-kira kebalikan dari append ()). 
+
+Perhatikan bahwa ini adalah * metode * pada daftar objek, sedangkan len () adalah fungsi yang mengambil daftar (atau string atau apapun) sebagai argumen. 
+
+
+Daftar = ['larry', 'curly', 'moe'] 
+~ List.append ('shemp')            append elem di akhir 
+~ List.insert (0, 'xxx')            masukkan elem pada indeks 0 
+~ list.extend (['yyy', 'zzz'])            tambahkan daftar elems at end 
+~ daftar cetak            ['xxx', 'larry', 'curly', 'moe', 'shemp', 'yyy', 'zzz'] 
+~ Print list.index ('keriting')            2 
+
+~ List.remove ('curly')            cari dan hapus elemen itu 
+~ List.pop (1)            menghapus dan mengembalikan 'larry' 
+~ daftar cetak            ['xxx', 'moe', 'shemp', 'yyy', 'zzz'] 
+
+Kesalahan umum: perhatikan bahwa metode di atas tidak * mengembalikan * daftar yang dimodifikasi, mereka hanya memodifikasi daftar aslinya. 
+
+~ Daftar = [1, 2, 3] 
+~ Print list.append (4)            TIDAK, tidak bekerja, append () return Tidak ada 
+~            Pola yang benar: 
+~ List.append (4) 
+~ Daftar cetak            [1, 2, 3, 4] 
+st Build Up 
+
+Salah satu pola yang umum adalah dengan memulai daftar daftar kosong [], lalu gunakan append () atau extend () untuk menambahkan elemen ke dalamnya: 
+
+~ List = []            Mulai sebagai daftar kosong 
+~ List.append ('a')            Gunakan append () untuk menambahkan elemen 
+~ List.append ('b') 
+
+Daftar irisan 
+
+Slice bekerja pada daftar seperti halnya senar, dan juga dapat digunakan untuk mengubah sub-bagian daftar. 
+
+~ Daftar = ['a', 'b', 'c', 'd'] 
+~ Daftar cetak [1: -1]            ['b', 'c'] 
+~ Daftar [0: 2] = 'z'            ganti ['a', 'b'] dengan ['z'] 
+~ Daftar cetak            ['z', 'c', 'd'] 
+Tipe data daftar memiliki beberapa metode lagi. Berikut adalah semua metode daftar objek: 
+
+List.append (x) 
+
+~~~ Tambahkan item ke bagian akhir daftar. Setara dengan [len (a):] = [x]. 
+
+list.extend (iterable) 
+
+~~~ Perluas daftar dengan menambahkan semua item dari iterable. Setara dengan [len (a):] = iterable. 
+
+list.insert (i, x) 
+
+~~~ Masukkan item pada posisi tertentu. Argumen pertama adalah indeks dari elemen yang sebelum dimasukkan, jadi a.insert (0, x) memasukkan di bagian depan daftar, dan a.insert (len (a), x) setara dengan a.append ( x). 
+
+List.remove (x) 
+
+~~~ Hapus item pertama dari daftar yang nilainya x. Ini adalah kesalahan jika tidak ada item seperti itu. 
+
+List.pop ([i]) 
+
+~~~ Hapus item pada posisi yang diberikan dalam daftar, dan kembalikan. Jika tidak ada indeks yang ditentukan, a.pop () menghapus dan mengembalikan item terakhir dalam daftar. (Tanda kurung siku di sekitar i pada tanda tangan metode menunjukkan bahwa parameternya adalah opsional, bukankah Anda harus mengetikkan tanda kurung siku pada posisi itu. Anda akan sering melihat notasi ini di Referensi Perpustakaan Python.) 
+
+List.clear () 
+
+~~~ Hapus semua item dari daftar. Setara dengan del a [:]. 
+
+List.index (x [, start [, end]]) 
+
+~~~ Kembalikan indeks berbasis nol dalam daftar item pertama yang nilainya x. Meningkatkan ValueError jika tidak ada item seperti itu. 
+
+~~~ Argumen dan argumen opsional dimulai dengan interpretasi seperti notasi irisan dan digunakan untuk membatasi pencarian ke urutan berikutnya dari daftar. Indeks yang dikembalikan dihitung relatif terhadap awal urutan penuh daripada argumen awal. 
+
+List.count (x) 
+
+~~~ Kembalikan berapa kali x muncul dalam daftar. 
+
+List.sort (key = None, reverse = False) 
+
+~~~ Urutkan item daftar di tempat (argumen dapat digunakan untuk kustomisasi sortir, lihat diurutkan () untuk penjelasan mereka). 
+
+List.reverse () 
+
+~~~ Membalikkan unsur daftar di tempat. 
+
+List.copy () 
+
+~~~ Kembalikan salinan daftar yang dangkal. Setara dengan [:]. 
+
+Contoh yang menggunakan sebagian besar metode daftar: 
+
+>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana'] 
+>>> fruits.count('apple') 
+2 
+>>> fruits.count('tangerine') 
+0 
+>>> fruits.index('banana') 
+3 
+>>>~fruits.index('banana', 4)        Find next banana starting a position 4 
+6 
+>>> fruits.reverse() 
+>>> fruits 
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange'] 
+>>> fruits.append('grape') 
+>>> fruits 
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape'] 
+>>> fruits.sort() 
+>>> fruits 
+['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear'] 
+>>> fruits.pop() 
+'pear' 
+
+mungkin telah memperhatikan bahwa metode seperti insert, remove atau sortir yang hanya memodifikasi daftar tidak memiliki nilai pengembalian tercetak - mereka mengembalikan default None. [1] Ini adalah prinsip desain untuk semua struktur data yang bisa berubah dengan Python. 
+
+>>> stack = [3, 4, 5] 
+>>> stack.append (6) 
+>>> stack.append (7) 
+>>> susun 
+[3, 4, 5, 6, 7] 
+>>> stack.pop () 
+7 
+>>> susun 
+[3, 4, 5, 6] 
+>>> stack.pop () 
+6 
+>>> stack.pop () 
+5 
+>>> susun 
+[3, 4] 
+
+5.1.2. Menggunakan Daftar sebagai Antrian 
+
+Hal ini juga memungkinkan untuk menggunakan daftar sebagai antrian, di mana elemen pertama yang ditambahkan adalah elemen pertama yang diambil ("first-in, first-out"); Namun, daftar tidak efisien untuk tujuan ini. Sementara menambahkan dan muncul dari akhir daftar dengan cepat, melakukan sisipan atau muncul dari awal daftar lambat (karena semua elemen lainnya harus digeser oleh satu). 
+
+Untuk menerapkan antrean, gunakan collections.deque yang dirancang agar cepat ditambahkan dan muncul dari kedua ujungnya. Sebagai contoh: 
+>>> 
+
+>>> dari koleksi import deque 
+>>> antrian = deque (["Eric", "John", "Michael"]) 
+>>> queue.append ("Terry")       Terry tiba 
+>>> queue.append ("Graham")       Graham tiba 
+>>> queue.popleft ()       Yang pertama tiba sekarang per
