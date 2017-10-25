@@ -400,6 +400,33 @@ end{verbatim}
 Contoh diatas menunjukan kelipatan dari suatu interval bilangan yang mempunyai sintaks
 range(<nilai-awal>, <nilai-akhir>, <kelipatan-angka>). 
 
+Perintah break, continue dan else
+Perintah break seperti dalam bahasa C, berarti keluar dari ruang lingkup yang terkecil dari
+kondisi for atau while.
+Perintah continue sama halnya dengan di C, yang berfungsi melanjutkan kalimat perintah
+berikutnya dalam kondisi perulangan.
+Pada kondisi perulangan juga diperbolehkan untuk menggunakan kalimat perintah else, yang
+dijalankan pada saat kondisi perulangan for tidak menemui suatu kondisi atau jika suatu kondisi tersebut
+mengalami kesalahan / false (dengan while), tetapi bukan pada saat kondisi perulangan dihentikan
+dengan perintah break.
+contoh
+
+\begin{verbatim}
+for n in range(2, 10):
+ for x in range(2, n):
+ if n % x == 0:
+ print n, 'sama dengan', x, '*', n/x break
+else:
+ print n, 'adalah bilangan prima'
+2 adalah bilangan prima
+3 adalah bilangan prima 4 sama dengan 2 * 2
+5 adalah bilangan prima 6 sama dengan 2 * 3
+7 adalah bilangan prima 8 sama dengan 2 * 4
+9 sama dengan 3 * 3
+end{verbatim}
+
+Penjelasannya adalah apabila suatu kondisi dalam perulangan for x in range(2, n) tidak ada yang
+terpenuhi maka alur perulangannya akan lari ke ruang lingkup perintah else. 
  
 Infinite Loop 
 
