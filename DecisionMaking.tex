@@ -391,6 +391,7 @@ terbesar = y
    Python tidak menggunakan    \{     \}   untuk menyertakan blok kode untuk Penggunaan if/loop/fungsi dll. Sebaliknya, Python menggunakan titik dua (:) dan indentasi /spasi untuk pernyataan   kelompok.Tes   boolean untuk if tidak perlu dalam tanda kurung (perbedaan besar dari C++/Java), dan dapat memiliki *elif* dan *else*. 
  
 \begin{verbatim}
+
             Nilai apapun dapat digunakan sebagai if-test. pada   " nol  "  nilai-nilai semua dihitung sebagai false:Tidak ada,0,string kosong,list kosong, dictionary kosong. Ada juga tipe Boolean dengan dua nilai: True dan False (jika dikonversi ke int, ini adalah 1 dan 0). Python memiliki operasi perbandingan yang biasa: ==, =, <, <=,>,> =. Tidak seperti Java dan C.Operator boolean bisa juga di eja seperti * and *, * or *, * not * (Python tidak menggunakan gaya C    \&      \&      \vert      \vert  !). 
 \end{verbatim}
  
@@ -714,7 +715,7 @@ Banyak peneliti telah menggunakan jaringan kepercayaan sebagai mekanisme yang mu
 
 Seperti yang ditunjukkan pada Gambar Gambar11 ada empat komponen model yang dibutuhkan: (i) proses input generatif (mencerminkan lingkungan fisik) yang menghasilkan pengamatan karakteristik rangsangan yang berisik seperti yang digunakan dalam percobaan aktual (misalnya gerakan titik), (ii ) Model generatif internal pembuat keputusan yang mencerminkan proses input generatif di bawah berbagai alternatif keputusan yang berbeda, (iii) mekanisme inferensi yang menerjemahkan pengamatan dari (i) ke kepercayaan posterior mengenai kebenaran alternatif menggunakan model generatif (ii ), dan (iv) kebijakan keputusan yang membuat keputusan berdasarkan kepercayaan posterior dari (iii). Perhatikan bahwa proses input (i) adalah untuk aplikasi neuroscience yang sering tidak ditentukan, karena data eksperimen akan digunakan sebagai input sensorik. Di sini, kita membuat parameterisasi proses input secara eksplisit, karena dalam eksperimen pengambilan keputusan persepsi yang khas, masukan sensorik aktual tidak disimpan atau dianggap relevan, namun diperkirakan dengan ukuran rangkumannya seperti koherensi gerakan dot acak.
 
-	\begin{figure}
+	\begin{figure}[ht]
 	\centerline{\includegraphics[width=1\textwidth]{figures/bayesian.PNG}}
 	\caption{model bayesian}
 	\label{bayesian}
@@ -725,7 +726,6 @@ Untuk kasus ini, proses input digunakan sebagai perkiraan masukan sensoris aktua
 \section {Mengisi model hirarkis}
 Kelas HDDM menyusun DDM hirarkis yang ini nantinya sesuai dengan data RT dan pilihan subjek. 
 Dengan tidak memberikan argumen tambahan selain data, HDDM membuat model yang sederhana dengan tidak memperhitungkan kondisi yang  berbeda. 
-
 Untuk mempercepat konvergensi, titik awal diatur ke nilai a-posterior maksimum (MAP) dengan memanggil metode HDDM.find starting values yang menggunakan optimasi pendakian terhadap gradien. 
 Metode HDDM.sample () kemudian melakukan inferensi Bayesian dengan menggambar sampel posterior menggunakan algoritma MCMC.
 
